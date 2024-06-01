@@ -108,12 +108,7 @@
 .layout-tv .headerRight {
     padding: 20px 10px !important;
 }
-/* Move left header back up */
-.layout-desktop .headerLeft
-.layout-tv .headerLeft {
-    position: relative !important;
-    top: -17px !important;
-}
+
 /* Mobile fixes */
 .layout-mobile .headroom--unpinned {
     transform: translateY(-50%);
