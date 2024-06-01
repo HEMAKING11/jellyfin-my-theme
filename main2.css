@@ -1374,6 +1374,22 @@ layout-mobile #itemDetailPage .detailImageContainer .card {
   background: rgba(0, 0, 0, .75);
 }
 
+/* Transparent ribbon bar */
+.detailRibbon {
+    background: transparent !important;
+}
+
+/* Add card around top-right buttons */
+.layout-desktop .mainDetailButtons {
+    background: var(--main-background-transparent) !important;
+    border-radius: 100px !important;
+    backdrop-filter: blur(10px) !important;
+}
+.layout-mobile .mainDetailButtons {
+    background: var(--secondary-background-color) !important;
+    border-radius: 100px !important;
+}
+
 /* Applying font family to body and headings */
 body, h1, h2, h4, h5, html {
   font-family: Rubik, sans-serif;
