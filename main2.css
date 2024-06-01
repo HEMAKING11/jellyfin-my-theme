@@ -60,10 +60,62 @@
   background: var(--accent2-light);
 }
 
-/* Transparent background for skin header */
+/* Transparent header bar */
 .skinHeader {
-  background: transparent !important;
-  position: static;
+    background-color: transparent !important;
+}
+.layout-desktop .skinHeader,
+.layout-tv .skinHeader {
+    padding-top: 1.5em !important;
+}
+.layout-tv .skinHeader {
+    padding-bottom: 10px !important;
+}
+/* Rounded header buttons */
+.headerTabs,
+.headerRight {
+    background-color: var(--main-background-transparent) !important;
+    border-radius: 50px !important;
+    backdrop-filter: blur(50px) !important;
+}
+.layout-desktop .headerTabs,
+.layout-desktop .headerRight,
+.layout-tv .headerTabs,
+.layout-tv .headerRight {
+    margin-bottom: 10px !important;
+}
+.layout-desktop .headerTabs {
+    margin-left: 160px !important;
+}
+/* Button height */
+.headerRight,
+.emby-tab-button {
+    height: 45px !important;
+}
+/* Lower header and add padding to right buttons */
+.layout-desktop .headerRight {
+    padding: 0px 5px !important;
+}
+.layout-tv .headerRight {
+    padding: 20px 10px !important;
+}
+/* Move left header back up */
+.layout-desktop .headerLeft
+.layout-tv .headerLeft {
+    position: relative !important;
+    top: -17px !important;
+}
+/* Mobile fixes */
+.layout-mobile .headroom--unpinned {
+    transform: translateY(-50%);
+}
+.layout-mobile .sectionTabs {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: auto !important;
+}
+.layout-mobile .emby-button-foreground {
+    top: -2px !important;
 }
 
 /* Layout adjustments for desktop and mobile */
