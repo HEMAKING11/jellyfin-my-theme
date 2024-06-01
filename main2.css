@@ -60,6 +60,15 @@
   background: var(--accent2-light);
 }
 
+/* Custom button color */
+.navMenuOption-selected {
+    background: var(--secondary-accent-color) !important;
+    color: var(--main-accent-color) !important;
+    backdrop-filter: blur(50px) !important;
+}
+
+
+
 /* Transparent header bar */
 .skinHeader {
     background-color: transparent !important;
