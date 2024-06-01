@@ -249,7 +249,7 @@ div[data-role=page].page {
   height: 100%;
   left: 0;
   transform: scale(1);
-  transition: transform .15s ease-in-out;
+  transition: transform .1s ease-in-out;
   width: 100%;
   z-index: -1;
 }
@@ -265,160 +265,56 @@ div[data-role=page].page {
 
 .card:focus-visible .cardImageContainer:after,
 .card:hover .cardImageContainer:after {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
-.card[data-type=Person] {
-  aspect-ratio: 1/1;
+.card.personCard {
   height: auto;
 }
 
-.card[data-type=Person] .cardPadder-overflowPortrait {
-  padding-bottom: 100% !important;
-}
-
-.card[data-type=Person] .cardPadder-overflowPortrait .cardImageIcon {
+.card.personCard .cardPadder-overflowPortrait .cardImageIcon {
   color: transparent !important;
 }
 
-.card[data-type=Person] .cardBox {
-  aspect-ratio: 1/1;
-  margin: .5em !important;
+.card.personCard .cardBox {
   position: relative;
 }
 
-.card[data-type=Person
-
-] .cardOverlayContainer {
+.card.personCard .cardOverlayContainer {
   background: transparent !important;
-  height: calc(100% - 2.825em);
   z-index: 3;
 }
 
-.card[data-type=Person] .cardOverlayButton-br {
+.card.personCard .cardOverlayButton-br {
   bottom: .5em;
   right: .5em;
 }
 
-.card[data-type=Person] .cardContent {
+.card.personCard .cardContent {
+  border-radius: 100% !important;
   filter: brightness(1);
+  height: calc(100% - 2em);
+  margin: 1em !important;
   transition: filter .25s ease-in-out;
+  width: calc(100% - 2em);
 }
 
-.card[data-type=Person] .cardScalable {
-  aspect-ratio: 1/1;
+.card.personCard .cardScalable {
+  aspect-ratio: 1;
   height: auto;
 }
 
-.card[data-type=Person] .cardScalable:after {
-  background: linear-gradient(0deg, rgba(0, 0, 0, .6), transparent);
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.card[data-type=Person] .cardScalable .cardImageContainer:after {
+.card.personCard .cardScalable .cardImageContainer:after {
   background-size: cover;
 }
 
-.card[data-type=Person] .cardText-first {
-  bottom: 0;
-  color: #fff;
-  padding: .5em !important;
-  position: absolute;
-  width: calc(100% - 1em);
-}
-
-.card[data-type=Person]:hover .cardContent {
-  filter: brightness(.3);
-}
-
-.card[data-type=Actor] {
-  aspect-ratio: 1/1;
-  height: auto;
-}
-
-.card[data-type=Actor] .cardPadder-overflowPortrait {
-  padding-bottom: 100% !important;
-}
-
-.card[data-type=Actor] .cardPadder-overflowPortrait .cardImageIcon {
-  color: transparent !important;
-}
-
-.card[data-type=Actor] .cardBox {
-  aspect-ratio: 1/1;
-  margin: .5em !important;
-  position: relative;
-}
-
-.card[data-type=Actor] .cardOverlayContainer {
-  background: transparent !important;
-  height: calc(100% - 2.825em);
-  z-index: 3;
-}
-
-.card[data-type=Actor] .cardOverlayButton-br {
-  bottom: .5em;
-  right: .5em;
-}
-
-.card[data-type=Actor] .cardContent {
-  filter: brightness(1);
-  transition: filter .25s ease-in-out;
-}
-
-.card[data-type=Actor] .cardScalable {
-  aspect-ratio: 1/1;
-  height: auto;
-}
-
-.card[data-type=Actor] .cardScalable:after {
-  background: linear-gradient(0deg, rgba(0, 0, 0, .6), transparent);
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.card[data-type=Actor] .cardScalable .cardImageContainer:after {
-  background-size: cover;
-}
-
-.card[data-type=Actor] .cardText-first {
-  bottom: 1.565em;
-  color: #fff;
-  padding: .1em .5em !important;
-  position: absolute;
-  width: calc(100% - 1em);
-}
-
-.card[data-type=Actor] .cardText-secondary {
-  bottom: .2em;
-  font-size: .86em;
-  padding: .1em .5em !important;
-  position: absolute;
-  width: calc(100% - 1em);
-}
-
-.card[data-type=Actor]:hover .cardContent {
-  filter: brightness(.3);
-}
-
-.card .cardBox {
+.cardBox {
   background: rgba(0, 0, 0, .2);
   border-radius: 10px;
   box-shadow: 0 0 .5em rgba(0, 0, 0, .75);
-  margin: .5em !important;
+  margin: .5em 1.5em 1.5em 0 !important;
   overflow: hidden;
-  transition: background .15s;
+  transition: background .1s;
 }
 
 .card:not([data-type=Person]) .cardText-secondary {
@@ -444,7 +340,7 @@ div[data-role=page].page {
 }
 
 .cardPadder {
-  background: linear-gradient(130deg, var(--accent1-dark), var(--accent2-dark)) !important;
+  background: transparent !important;
 }
 
 .cardPadder-square {
