@@ -417,22 +417,37 @@ div[data-role=page].page {
   background: transparent;
 }
 
-/* Footer adjustments for inner cards */
+/* Floating progress bar */
 .innerCardFooter {
-  border-radius: 10px;
-  margin-bottom: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+    border-radius: var(--rounded-cards) !important;
+    width: 100px !important;
+    margin-left: 5px !important;
+    margin-bottom: 5px !important;
+    padding: 5px !important;
+    bottom: 0% !important;
+    background: rgba(0,0,0,0.5) !important;
 }
-
-.innerCardFooter .itemProgressBar {
-  background: hsla(0,0%,100%,.3);
-  height: .4em;
+.fullInnerCardFooter {
+    bottom: 5% !important;
+    width: 90% !important;
+    margin: auto !important;
+    border-radius: 100px !important;
+    padding: 0px !important;
 }
-
-.innerCardFooter .itemProgressBar .itemProgressBarForeground {
-  background: linear-gradient(130deg, var(--accent1-light), var(--accent2-light));
+.itemProgressBar {
+    height: 10px !important;
+    background: var(--main-background-transparent) !important;
+    backdrop-filter: blur(2px) !important;
+}
+.innerCardFooterClear {
+    background-color: none !important;
+}
+.innerCardFooter .cardText {
+    padding: 0 0 0 10px !important
+}
+.itemProgressBarForeground {
+    border-radius: 100px !important;
+    background: var(--main-accent-color) !important;
 }
 
 /* Overlay container for cards */
