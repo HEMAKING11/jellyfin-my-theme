@@ -37,7 +37,7 @@
 }
 
 .itemName {
-  display: block !important;
+  margin: 0.5em 0 !important;
 }
 
 .layout-mobile #itemDetailPage .itemName.infoText.parentNameLast {
